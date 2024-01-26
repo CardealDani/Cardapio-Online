@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cardapio Online</string>
+    <string name="text_body">Faça seu pedido de forma online</string>
+    <string name="text_number_table">Mesa: 001</string>
+    <string name="text_cardapio">Cardápio Digital</string>
+    <string name="text_principais">Principais</string>
+    <string name="text_entradas">Entradas</string>
+    <string name="text_bebidas">Bebidas</string>
+    <string name="text_sobremesas">Sobremesas</string>
+
+</resources>

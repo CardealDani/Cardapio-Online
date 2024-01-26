@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view_header"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#000"
+        android:backgroundTint="@color/back_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_number_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@color/black"
+        android:padding="2dp"
+        android:text="@string/text_number_table"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="80dp"
+        android:layout_height="68dp"
+        android:layout_margin="4dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_cardapio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_cardapio"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/text_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/text_body"
+        android:textAllCaps="true"
+        android:textColor="#1A254F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_header" />
+
+    <TextView
+        android:id="@+id/text_entradas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_section"
+        android:padding="5dp"
+        android:text="@string/text_entradas"
+        app:layout_constraintTop_toBottomOf="@id/text_body"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_principais"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:layout_marginEnd="1dp"
+        />
+
+
+    <TextView
+        android:id="@+id/text_principais"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_section"
+        android:padding="5dp"
+        android:text="@string/text_principais"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/text_bebidas"
+        app:layout_constraintStart_toEndOf="@id/text_entradas"
+        app:layout_constraintTop_toTopOf="@id/text_entradas"
+        android:layout_marginEnd="1dp"
+
+
+        />
+    <TextView
+        android:id="@+id/text_bebidas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_section"
+        android:padding="5dp"
+        android:text="@string/text_bebidas"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="@id/text_entradas"
+        app:layout_constraintStart_toEndOf="@id/text_principais"
+        app:layout_constraintEnd_toStartOf="@id/text_sobremesas"
+        android:layout_marginEnd="1dp"
+
+        />
+    <TextView
+        android:id="@+id/text_sobremesas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_section"
+        android:padding="5dp"
+        android:text="@string/text_sobremesas"
+        app:layout_constraintTop_toTopOf="@id/text_entradas"
+        app:layout_constraintStart_toEndOf="@id/text_bebidas"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/text_entradas_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_entradas"
+        app:layout_constraintTop_toBottomOf="@id/text_entradas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:id="@+id/text_bolinhas_de_queijo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bolinhas de Queijo"
+        app:layout_constraintTop_toBottomOf="@id/text_entradas_02"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 10,00"
+        app:layout_constraintTop_toBottomOf="@id/text_bolinhas_de_queijo"
+        />
+        
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

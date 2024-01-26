@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="0dp" /> <!-- Defina isso como 0 para cantos quadrados -->
+    <solid android:color="@android:color/darker_gray" /> <!-- Cor de fundo do botão -->
+</shape>
