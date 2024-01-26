@@ -7,5 +7,28 @@
     <string name="text_entradas">Entradas</string>
     <string name="text_bebidas">Bebidas</string>
     <string name="text_sobremesas">Sobremesas</string>
+    <string name="text_bolinhas_de_queijo">Bolinhas de Queijo</string>
+    <string name="text_tempo_bolinhas_de_queijo">10~15 min</string>
+    <string name="text_value_bolinhas">R$15,00</string>
+    <string name="text_batata_frita">Batata Frita</string>
+    <string name="text_value_batata">R$12,00</string>
+    <string name="text_tempo_batata_frita">8~10 min</string>
+    <string name="text_pasteizinhos_assados">Pasteizinhos Assados</string>
+    <string name="text_value_pasteizinhos">R$13,00</string>
+    <string name="text_tempo_pasteizinhos_assados">8~10 min</string>
+    <string name="text_moqueca">Moqueca de Peixe branco com arroz </string>
+    <string name="text_value_moqueca">R$120,00</string>
+    <string name="text_tempo_moqueca">40~50 min</string>
+    <string name="text_lasanha">Lasanha de Frango </string>
+    <string name="text_value_lasanha">R$90,00</string>
+    <string name="text_tempo_lasanha">50~60 min</string>
+    <string name="text_peixe">Peixe ao forno com batatas </string>
+    <string name="text_value_peixe">R$110,00</string>
+    <string name="text_tempo_peixe">40~50 min</string>
+
+
+
+
+
 
 </resources>

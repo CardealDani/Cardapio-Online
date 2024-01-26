@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="back_header">#2C8FFB</color>
     <color name="gray_section">#e2e2e2</color>
+    <color name="red_time">#D64B4B</color>
 </resources>
