@@ -1,426 +1,388 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white_back"
+    android:orientation="vertical"
+    >
+
+    <!-- ScrollView para o conteúdo rolável -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <View
-        android:id="@+id/view_header"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:background="#000"
-        android:backgroundTint="@color/back_header"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/text_number_table"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:background="@color/black"
-        android:padding="2dp"
-        android:text="@string/text_number_table"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/text_cardapio"
-        app:layout_constraintStart_toStartOf="@+id/text_cardapio"
-        app:layout_constraintTop_toBottomOf="@+id/text_cardapio" />
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="80dp"
-        android:layout_height="68dp"
-        android:layout_margin="4dp"
-        android:src="@drawable/logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/text_cardapio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_cardapio"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@id/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/logo" />
-
-    <TextView
-        android:id="@+id/text_body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/text_body"
-        android:textAllCaps="true"
-        android:textColor="#1A254F"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_header" />
-
-    <TextView
-        android:id="@+id/text_entradas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="1dp"
-        android:background="@color/gray_section"
-        android:padding="5dp"
-        android:text="@string/text_entradas"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@id/text_principais"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_body" />
-
-
-    <TextView
-        android:id="@+id/text_principais"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
-        android:background="@color/gray_section"
-        android:padding="5dp"
-        android:text="@string/text_principais"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@id/text_bebidas"
-        app:layout_constraintStart_toEndOf="@id/text_entradas"
-        app:layout_constraintTop_toTopOf="@id/text_entradas"
-
-
-        />
-
-    <TextView
-        android:id="@+id/text_bebidas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
-        android:background="@color/gray_section"
-        android:padding="5dp"
-        android:text="@string/text_bebidas"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@id/text_sobremesas"
-        app:layout_constraintStart_toEndOf="@id/text_principais"
-        app:layout_constraintTop_toTopOf="@id/text_entradas"
-
-        />
-
-    <TextView
-        android:id="@+id/text_sobremesas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/gray_section"
-        android:padding="5dp"
-        android:text="@string/text_sobremesas"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/text_bebidas"
-        app:layout_constraintTop_toTopOf="@id/text_entradas" />
-
-    <TextView
-        android:id="@+id/text_entradas_02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/text_entradas"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_entradas" />
-
-
-    <CheckBox
-        android:id="@+id/check_bolinhas_de_queijo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/image_bolinhas_de_queijo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/text_bolinhas_de_queijo" />
-    <TextView
-        android:id="@+id/text_bolinhas_de_queijo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/text_bolinhas_de_queijo"
-        app:layout_constraintStart_toEndOf="@id/check_bolinhas_de_queijo"
-        app:layout_constraintTop_toBottomOf="@id/text_entradas_02"
-        app:layout_constraintEnd_toStartOf="@+id/image_bolinhas_de_queijo"
-        android:textSize="18sp"
-        android:layout_marginTop="18dp" />
-    <TextView
-        android:id="@+id/text_value_bolinhas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_value_bolinhas"
-        app:layout_constraintTop_toBottomOf="@id/text_bolinhas_de_queijo"
-        app:layout_constraintStart_toStartOf="@id/text_bolinhas_de_queijo"
-        />
-    <ImageView
-        android:id="@+id/image_tempo_bolinhas_de_queijo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_access_time_24"
-        android:textSize="12sp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_value_bolinhas"
-        app:layout_constraintStart_toEndOf="@+id/text_value_bolinhas"
-        app:layout_constraintTop_toTopOf="@+id/text_value_bolinhas" />
-    <TextView
-        android:id="@+id/text_tempo_bolinhas_de_queijo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_tempo_bolinhas_de_queijo"
-        android:textColor="@color/red_time"
-        android:layout_marginStart="3dp"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_value_bolinhas"
-        app:layout_constraintStart_toEndOf="@+id/image_tempo_bolinhas_de_queijo"
-        app:layout_constraintTop_toTopOf="@+id/text_value_bolinhas" />
-
-    <ImageView
-        android:id="@+id/image_bolinhas_de_queijo"
-        android:layout_width="85dp"
-        android:layout_height="65dp"
-        android:layout_marginEnd="32dp"
-        android:src="@drawable/bolinhas_de_queijo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/text_bolinhas_de_queijo"
-        app:layout_constraintTop_toTopOf="@id/text_bolinhas_de_queijo" />
 
     <View
-        android:id="@+id/view_bolinhas"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        app:layout_constraintTop_toBottomOf="@id/image_bolinhas_de_queijo"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@color/gray_section"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        />
+            android:id="@+id/view_header"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:background="#000"
+            android:backgroundTint="@color/color_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_number_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@color/black"
+            android:padding="2dp"
+            android:text="@string/text_number_table"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/text_cardapio"
+            app:layout_constraintStart_toStartOf="@+id/text_cardapio"
+            app:layout_constraintTop_toBottomOf="@+id/text_cardapio" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="68dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_cardapio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_cardapio"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@id/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/logo" />
+
+        <TextView
+            android:id="@+id/text_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="@string/text_body"
+            android:textAllCaps="true"
+            android:textColor="@color/color_text_faça_pedido"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_header" />
+
+        <TextView
+            android:id="@+id/text_entradas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/text_entradas"
+            android:textColor="@color/text_color"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_body" />
 
 
-    <CheckBox
-        android:id="@+id/check_batata_frita"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/image_batata_frita"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/text_batata_frita" />
-    <TextView
-        android:id="@+id/text_batata_frita"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/text_batata_frita"
-        app:layout_constraintStart_toEndOf="@id/check_batata_frita"
-        app:layout_constraintTop_toBottomOf="@id/view_bolinhas"
-        app:layout_constraintEnd_toStartOf="@+id/image_batata_frita"
-        android:textSize="18sp"
-        android:layout_marginTop="18dp" />
-    <ImageView
-        android:id="@+id/image_batata_frita"
-        android:layout_width="85dp"
-        android:layout_height="65dp"
-        android:layout_marginEnd="32dp"
-        android:src="@drawable/batata_frita"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/text_batata_frita"
-        app:layout_constraintTop_toTopOf="@id/text_batata_frita"
-        />
-    <TextView
-        android:id="@+id/text_value_batata"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_value_batata"
-        app:layout_constraintStart_toStartOf="@+id/text_batata_frita"
-        app:layout_constraintTop_toBottomOf="@id/text_batata_frita" />
-    <TextView
-        android:id="@+id/text_tempo_batata"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_tempo_bolinhas_de_queijo"
-        android:textColor="@color/red_time"
-        android:textSize="12sp"
-        android:layout_marginStart="3dp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_value_batata"
-        app:layout_constraintStart_toEndOf="@+id/image_tempo_batata"
-        app:layout_constraintTop_toTopOf="@+id/text_value_batata" />
-    <ImageView
-        android:id="@+id/image_tempo_batata"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_access_time_24"
-        android:textSize="15sp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_value_batata"
-        app:layout_constraintStart_toEndOf="@+id/text_value_batata"
-        app:layout_constraintTop_toTopOf="@+id/text_value_batata" />
-    <View
-        android:id="@+id/view_batata_frita"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        app:layout_constraintTop_toBottomOf="@id/image_batata_frita"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@color/gray_section"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp" />
+        <CheckBox
+            android:id="@+id/check_bolinhas_de_queijo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/image_bolinhas_de_queijo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_bolinhas_de_queijo" />
+        <TextView
+            android:id="@+id/text_bolinhas_de_queijo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_bolinhas_de_queijo"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@id/check_bolinhas_de_queijo"
+            app:layout_constraintTop_toBottomOf="@id/text_entradas"
+            app:layout_constraintEnd_toStartOf="@+id/image_bolinhas_de_queijo"
+            android:textSize="18sp"
+            android:layout_marginTop="18dp" />
+        <TextView
+            android:id="@+id/text_value_bolinhas"
+            android:textColor="@color/color_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value_bolinhas"
+            app:layout_constraintTop_toBottomOf="@id/text_bolinhas_de_queijo"
+            app:layout_constraintStart_toStartOf="@id/text_bolinhas_de_queijo"
+            />
+        <ImageView
+            android:id="@+id/image_tempo_bolinhas_de_queijo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_access_time_24"
+            android:textSize="12sp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_value_bolinhas"
+            app:layout_constraintStart_toEndOf="@+id/text_value_bolinhas"
+            app:layout_constraintTop_toTopOf="@+id/text_value_bolinhas" />
+        <TextView
+            android:id="@+id/text_tempo_bolinhas_de_queijo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_tempo_bolinhas_de_queijo"
+            android:textColor="@color/red_time"
+            android:layout_marginStart="3dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_value_bolinhas"
+            app:layout_constraintStart_toEndOf="@+id/image_tempo_bolinhas_de_queijo"
+            app:layout_constraintTop_toTopOf="@+id/text_value_bolinhas" />
 
-    <CheckBox
-        android:id="@+id/check_pasteizinhos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/image_pasteizinhos_assados"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/text_pasteizinhos_assados" />
-    <TextView
-        android:id="@+id/text_pasteizinhos_assados"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/text_pasteizinhos_assados"
-        app:layout_constraintStart_toEndOf="@id/check_pasteizinhos"
-        app:layout_constraintTop_toBottomOf="@id/view_batata_frita"
-        app:layout_constraintEnd_toStartOf="@+id/image_batata_frita"
-        android:textSize="18sp"
-        android:layout_marginTop="18dp" />
-    <ImageView
-        android:id="@+id/image_pasteizinhos_assados"
-        android:layout_width="85dp"
-        android:layout_height="65dp"
-        android:layout_marginEnd="32dp"
-        android:src="@drawable/pasteizinhos_assados"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/text_pasteizinhos_assados"
-        app:layout_constraintTop_toTopOf="@id/text_pasteizinhos_assados"
-        />
-    <TextView
-        android:id="@+id/text_value_pasteizinhos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_value_pasteizinhos"
-        app:layout_constraintStart_toStartOf="@+id/text_pasteizinhos_assados"
-        app:layout_constraintTop_toBottomOf="@id/text_pasteizinhos_assados" />
-    <TextView
-        android:id="@+id/text_tempo_pasteizinhos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_tempo_pasteizinhos_assados"
-        android:textColor="@color/red_time"
-        android:textSize="12sp"
-        android:layout_marginStart="3dp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_value_pasteizinhos"
-        app:layout_constraintStart_toEndOf="@+id/image_tempo_pasteizinhos"
-        app:layout_constraintTop_toTopOf="@+id/text_value_pasteizinhos" />
-    <ImageView
-        android:id="@+id/image_tempo_pasteizinhos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_access_time_24"
-        android:textSize="15sp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_value_pasteizinhos"
-        app:layout_constraintStart_toEndOf="@+id/text_value_pasteizinhos"
-        app:layout_constraintTop_toTopOf="@+id/text_value_pasteizinhos" />
-    <View
-        android:id="@+id/view_pasteizinhos"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        app:layout_constraintTop_toBottomOf="@id/image_pasteizinhos_assados"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@color/gray_section"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp" />
+        <ImageView
+            android:id="@+id/image_bolinhas_de_queijo"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/bolinhas_de_queijo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_bolinhas_de_queijo" />
+
+        <View
+            android:id="@+id/view_bolinhas"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/image_bolinhas_de_queijo"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/gray_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            />
 
 
-    <TextView
-        android:id="@+id/text_principais_02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/text_principais"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_pasteizinhos" />
+        <CheckBox
+            android:id="@+id/check_batata_frita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/image_batata_frita"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_batata_frita" />
+        <TextView
+            android:id="@+id/text_batata_frita"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_batata_frita"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@id/check_batata_frita"
+            app:layout_constraintTop_toBottomOf="@id/view_bolinhas"
+            app:layout_constraintEnd_toStartOf="@+id/image_batata_frita"
+            android:textSize="18sp"
+            android:layout_marginTop="18dp" />
+        <ImageView
+            android:id="@+id/image_batata_frita"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/batata_frita"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_batata_frita"
+            />
+        <TextView
+            android:id="@+id/text_value_batata"
+            android:textColor="@color/color_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value_batata"
+            app:layout_constraintStart_toStartOf="@+id/text_batata_frita"
+            app:layout_constraintTop_toBottomOf="@id/text_batata_frita" />
+        <TextView
+            android:id="@+id/text_tempo_batata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_tempo_bolinhas_de_queijo"
+            android:textColor="@color/red_time"
+            android:textSize="12sp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_value_batata"
+            app:layout_constraintStart_toEndOf="@+id/image_tempo_batata"
+            app:layout_constraintTop_toTopOf="@+id/text_value_batata" />
+        <ImageView
+            android:id="@+id/image_tempo_batata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_access_time_24"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_value_batata"
+            app:layout_constraintStart_toEndOf="@+id/text_value_batata"
+            app:layout_constraintTop_toTopOf="@+id/text_value_batata"
+            />
+        <View
+            android:id="@+id/view_batata_frita"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/image_batata_frita"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/gray_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
 
-    <CheckBox
-        android:id="@+id/check_moqueca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/image_moqueca"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/text_moqueca" />
-    <TextView
-        android:id="@+id/text_moqueca"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/text_moqueca"
-        app:layout_constraintStart_toEndOf="@id/check_moqueca"
-        app:layout_constraintTop_toBottomOf="@id/text_principais_02"
-        app:layout_constraintEnd_toStartOf="@+id/image_moqueca"
-        android:textSize="18sp"
-        android:layout_marginTop="18dp" />
-    <ImageView
-        android:id="@+id/image_moqueca"
-        android:layout_width="85dp"
-        android:layout_height="65dp"
-        android:layout_marginEnd="32dp"
-        android:src="@drawable/moqueca"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/text_moqueca"
-        app:layout_constraintTop_toTopOf="@id/text_moqueca"
-        />
-    <TextView
-        android:id="@+id/text_value_moqueca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_value_moqueca"
-        app:layout_constraintStart_toStartOf="@+id/text_moqueca"
-        app:layout_constraintTop_toBottomOf="@id/text_moqueca" />
-    <TextView
-        android:id="@+id/text_tempo_moqueca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_tempo_moqueca"
-        android:textColor="@color/red_time"
-        android:textSize="12sp"
-        android:layout_marginStart="3dp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_value_moqueca"
-        app:layout_constraintStart_toEndOf="@+id/image_tempo_moqueca"
-        app:layout_constraintTop_toTopOf="@+id/text_value_moqueca" />
-    <ImageView
-        android:id="@+id/image_tempo_moqueca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_access_time_24"
-        android:textSize="15sp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_value_moqueca"
-        app:layout_constraintStart_toEndOf="@+id/text_value_moqueca"
-        app:layout_constraintTop_toTopOf="@+id/text_value_moqueca" />
-    <View
-        android:id="@+id/view_moqueca"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        app:layout_constraintTop_toBottomOf="@id/image_moqueca"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@color/gray_section"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp" />
+        <CheckBox
+            android:id="@+id/check_pasteizinhos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/image_pasteizinhos_assados"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_pasteizinhos_assados" />
+        <TextView
+            android:id="@+id/text_pasteizinhos_assados"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_pasteizinhos_assados"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@id/check_pasteizinhos"
+            app:layout_constraintTop_toBottomOf="@id/view_batata_frita"
+            app:layout_constraintEnd_toStartOf="@+id/image_batata_frita"
+            android:textSize="18sp"
+            android:layout_marginTop="18dp" />
+        <ImageView
+            android:id="@+id/image_pasteizinhos_assados"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/pasteizinhos_assados"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_pasteizinhos_assados"
+            />
+        <TextView
+            android:id="@+id/text_value_pasteizinhos"
+            android:textColor="@color/color_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value_pasteizinhos"
+            app:layout_constraintStart_toStartOf="@+id/text_pasteizinhos_assados"
+            app:layout_constraintTop_toBottomOf="@id/text_pasteizinhos_assados" />
+        <TextView
+            android:id="@+id/text_tempo_pasteizinhos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_tempo_pasteizinhos_assados"
+            android:textColor="@color/red_time"
+            android:textSize="12sp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_value_pasteizinhos"
+            app:layout_constraintStart_toEndOf="@+id/image_tempo_pasteizinhos"
+            app:layout_constraintTop_toTopOf="@+id/text_value_pasteizinhos" />
+        <ImageView
+            android:id="@+id/image_tempo_pasteizinhos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_access_time_24"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_value_pasteizinhos"
+            app:layout_constraintStart_toEndOf="@+id/text_value_pasteizinhos"
+            app:layout_constraintTop_toTopOf="@+id/text_value_pasteizinhos" />
+        <View
+            android:id="@+id/view_pasteizinhos"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/image_pasteizinhos_assados"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/gray_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/text_principais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/text_principais"
+            android:textColor="@color/text_color"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_pasteizinhos" />
+
+        <CheckBox
+            android:id="@+id/check_moqueca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/image_moqueca"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_moqueca" />
+        <TextView
+            android:id="@+id/text_moqueca"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_moqueca"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@id/check_moqueca"
+            app:layout_constraintTop_toBottomOf="@id/text_principais"
+            app:layout_constraintEnd_toStartOf="@+id/image_moqueca"
+            android:textSize="18sp"
+            android:layout_marginTop="18dp" />
+        <ImageView
+            android:id="@+id/image_moqueca"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/moqueca"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_moqueca"
+            />
+        <TextView
+            android:id="@+id/text_value_moqueca"
+            android:textColor="@color/color_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value_moqueca"
+            app:layout_constraintStart_toStartOf="@+id/text_moqueca"
+            app:layout_constraintTop_toBottomOf="@id/text_moqueca" />
+        <TextView
+            android:id="@+id/text_tempo_moqueca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_tempo_moqueca"
+            android:textColor="@color/red_time"
+            android:textSize="12sp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_value_moqueca"
+            app:layout_constraintStart_toEndOf="@+id/image_tempo_moqueca"
+            app:layout_constraintTop_toTopOf="@+id/text_value_moqueca" />
+        <ImageView
+            android:id="@+id/image_tempo_moqueca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_access_time_24"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_value_moqueca"
+            app:layout_constraintStart_toEndOf="@+id/text_value_moqueca"
+            app:layout_constraintTop_toTopOf="@+id/text_value_moqueca" />
+        <View
+            android:id="@+id/view_moqueca"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/image_moqueca"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/gray_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
 
         <CheckBox
             android:id="@+id/check_lasanha"
@@ -435,6 +397,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/text_lasanha"
+            android:textColor="@color/text_color"
             app:layout_constraintStart_toEndOf="@id/check_lasanha"
             app:layout_constraintTop_toBottomOf="@id/view_moqueca"
             app:layout_constraintEnd_toStartOf="@+id/image_lasanha"
@@ -448,12 +411,12 @@
             android:layout_marginEnd="32dp"
             android:src="@drawable/lasanha"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/text_lasanha"
             app:layout_constraintTop_toTopOf="@id/text_lasanha"
             />
 
         <TextView
             android:id="@+id/text_value_lasanha"
+            android:textColor="@color/color_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_value_lasanha"
@@ -505,6 +468,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/text_peixe"
+            android:textColor="@color/text_color"
             app:layout_constraintStart_toEndOf="@id/check_peixe"
             app:layout_constraintTop_toBottomOf="@id/view_lasanha"
             app:layout_constraintEnd_toStartOf="@+id/image_peixe"
@@ -517,11 +481,11 @@
             android:layout_marginEnd="32dp"
             android:src="@drawable/peixe_assado"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/text_peixe"
             app:layout_constraintTop_toTopOf="@id/text_peixe"
             />
         <TextView
             android:id="@+id/text_value_peixe"
+            android:textColor="@color/color_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_value_peixe"
@@ -560,14 +524,379 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="10dp" />
 
+        <TextView
+            android:id="@+id/text_bebidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/text_bebidas"
+            android:textColor="@color/text_color"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_peixe" />
 
+        <CheckBox
+            android:id="@+id/check_refrigerante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/image_refrigerante"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_refrigerante" />
+        <TextView
+            android:id="@+id/text_refrigerante"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_refrigerante"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@id/check_refrigerante"
+            app:layout_constraintTop_toBottomOf="@id/text_bebidas"
+            app:layout_constraintEnd_toStartOf="@+id/image_refrigerante"
+            android:textSize="18sp"
+            android:layout_marginTop="18dp" />
+        <ImageView
+            android:id="@+id/image_refrigerante"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/refrigerante"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_refrigerante"
+            />
+        <TextView
+            android:id="@+id/text_value_refrigerante"
+            android:textColor="@color/color_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value_refrigerante"
+            app:layout_constraintStart_toStartOf="@+id/text_refrigerante"
+            app:layout_constraintTop_toBottomOf="@id/text_refrigerante" />
+        <View
+            android:id="@+id/view_refrigerante"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/image_refrigerante"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/gray_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
 
+        <CheckBox
+            android:id="@+id/check_suco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/image_suco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_suco"
+            />
+        <TextView
+            android:id="@+id/text_suco"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_suco"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@id/check_suco"
+            app:layout_constraintTop_toBottomOf="@id/view_refrigerante"
+            app:layout_constraintEnd_toStartOf="@+id/image_suco"
+            android:textSize="18sp"
+            android:layout_marginTop="18dp" />
+        <ImageView
+            android:id="@+id/image_suco"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/suco"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_suco"
+            />
+        <TextView
+            android:id="@+id/text_value_suco"
+            android:textColor="@color/color_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value_suco"
+            app:layout_constraintStart_toStartOf="@+id/text_suco"
+            app:layout_constraintTop_toBottomOf="@id/text_suco" />
+        <TextView
+            android:id="@+id/text_tempo_suco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_tempo_suco"
+            android:textColor="@color/red_time"
+            android:textSize="12sp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_value_suco"
+            app:layout_constraintStart_toEndOf="@+id/image_tempo_suco"
+            app:layout_constraintTop_toTopOf="@+id/text_value_suco" />
+        <ImageView
+            android:id="@+id/image_tempo_suco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_access_time_24"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_value_suco"
+            app:layout_constraintStart_toEndOf="@+id/text_value_suco"
+            app:layout_constraintTop_toTopOf="@+id/text_value_suco" />
 
+        <View
+            android:id="@+id/view_suco"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/image_suco"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/gray_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
 
+        <CheckBox
+            android:id="@+id/check_agua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/image_agua"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_agua" />
+        <TextView
+            android:id="@+id/text_agua"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_agua"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@id/check_agua"
+            app:layout_constraintTop_toBottomOf="@id/view_suco"
+            app:layout_constraintEnd_toStartOf="@+id/image_agua"
+            android:textSize="18sp"
+            android:layout_marginTop="18dp" />
+        <ImageView
+            android:id="@+id/image_agua"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/agua"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_agua"
+            />
+        <TextView
+            android:id="@+id/text_value_agua"
+            android:textColor="@color/color_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value_agua"
+            app:layout_constraintStart_toStartOf="@+id/text_agua"
+            app:layout_constraintTop_toBottomOf="@id/text_agua" />
+        <View
+            android:id="@+id/view_agua"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/image_agua"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/gray_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
 
+        <TextView
+            android:id="@+id/text_sobremesas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/text_sobremesas"
+            android:textColor="@color/text_color"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_agua" />
+        <!-- Checkbox Pudim -->
+        <CheckBox
+            android:id="@+id/check_pudim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/image_pudim"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_pudim" />
 
+        <TextView
+            android:id="@+id/text_pudim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_pudim"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@id/check_pudim"
+            app:layout_constraintTop_toBottomOf="@id/text_sobremesas"
+            app:layout_constraintEnd_toStartOf="@+id/image_pudim"
+            android:textSize="18sp"
+            android:layout_marginTop="18dp" />
 
+        <ImageView
+            android:id="@+id/image_pudim"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/pudim"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_pudim" />
 
+        <TextView
+            android:id="@+id/text_value_pudim"
+            android:textColor="@color/color_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value_pudim"
+            app:layout_constraintStart_toStartOf="@+id/text_pudim"
+            app:layout_constraintTop_toBottomOf="@id/text_pudim" />
+
+        <View
+            android:id="@+id/view_pudim"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/image_pudim"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/gray_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
+
+        <!-- Checkbox Mousse -->
+        <CheckBox
+            android:id="@+id/check_mousse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/image_mousse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_mousse" />
+        <TextView
+            android:id="@+id/text_mousse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_mousse"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@id/check_mousse"
+            app:layout_constraintTop_toBottomOf="@id/view_pudim"
+            app:layout_constraintEnd_toStartOf="@+id/image_mousse"
+            android:textSize="18sp"
+            android:layout_marginTop="18dp" />
+        <ImageView
+            android:id="@+id/image_mousse"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/mousse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_mousse" />
+        <TextView
+            android:id="@+id/text_value_mousse"
+            android:textColor="@color/color_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value_mousse"
+            app:layout_constraintStart_toStartOf="@+id/text_mousse"
+            app:layout_constraintTop_toBottomOf="@id/text_mousse" />
+        <View
+            android:id="@+id/view_mousse"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/image_mousse"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/gray_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
+
+        <!-- Checkbox Petit Gateau -->
+        <CheckBox
+            android:id="@+id/check_petit_gateau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/image_petit_gateau"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_petit_gateau" />
+        <TextView
+            android:id="@+id/text_petit_gateau"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_petit_gateau"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@id/check_petit_gateau"
+            app:layout_constraintTop_toBottomOf="@id/view_mousse"
+            app:layout_constraintEnd_toStartOf="@+id/image_petit_gateau"
+            android:textSize="18sp"
+            android:layout_marginTop="18dp" />
+        <ImageView
+            android:id="@+id/image_petit_gateau"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/petit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_petit_gateau" />
+        <TextView
+            android:id="@+id/text_value_petit_gateau"
+            android:textColor="@color/color_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_value_petit_gateau"
+            app:layout_constraintStart_toStartOf="@+id/text_petit_gateau"
+            app:layout_constraintTop_toBottomOf="@id/text_petit_gateau" />
+        <View
+            android:id="@+id/view_petit_gateau"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/image_petit_gateau"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/gray_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.core.widget.NestedScrollView>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:background="@color/color_header"
+        android:layout_gravity="center_vertical"
+        android:paddingEnd="32dp"
+        android:paddingStart="32dp"
+        >
+
+        <!-- Texto -->
+        <TextView
+            android:id="@+id/value_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/text_value_total"
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            />
+
+        <!-- Botão -->
+        <Button
+            android:id="@+id/button_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_button"
+            android:backgroundTint="@color/orange_button"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

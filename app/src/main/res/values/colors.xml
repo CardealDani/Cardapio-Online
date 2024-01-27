@@ -2,7 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="back_header">#2C8FFB</color>
+    <color name="color_header">#2C8FFB</color>
+    <color name="white_back">#fef7ff</color>
     <color name="gray_section">#e2e2e2</color>
     <color name="red_time">#D64B4B</color>
+    <color name="text_color">#1C1C1C</color>
+    <color name="color_text_faça_pedido">#1A254F</color>
+    <color name="color_price">#4A4A4A</color>
+    <color name="orange_button">#FFEA910C</color>
 </resources>
