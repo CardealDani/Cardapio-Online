@@ -855,48 +855,62 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="10dp" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </ScrollView>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:orientation="horizontal"
+        android:layout_height="115dp"
         android:background="@color/color_header"
-        android:layout_gravity="center_vertical"
         android:paddingEnd="32dp"
         android:paddingStart="32dp"
         >
 
+        <EditText
+            android:id="@+id/text_observation"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/text_color"
+            android:hint="@string/text_observation"
+            android:background="#E6DFD8"
+            app:layout_constraintBottom_toTopOf="@id/value_total"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <!-- Texto -->
         <TextView
             android:id="@+id/value_total"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/text_value_total"
-            android:textSize="26sp"
-            android:textColor="@color/white"
-            android:layout_gravity="center"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             android:textAlignment="center"
-            />
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_total"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_observation" />
 
         <!-- Botão -->
         <Button
             android:id="@+id/button_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/text_button"
             android:backgroundTint="@color/orange_button"
-            android:layout_gravity="center"
-            />
+            android:text="@string/text_button"
+            app:layout_constraintBottom_toBottomOf="@+id/value_total"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/value_total"
+            app:layout_constraintTop_toTopOf="@id/value_total" />
 
-    </LinearLayout>
-
-
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

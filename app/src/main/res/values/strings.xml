@@ -55,8 +55,7 @@
     <string name="text_value_total">R$0,00</string>
     <string name="text_button">Enviar pedido</string>
 
-
-
+    <string name="text_observation">Escreva alguma observação( S/Cebola...)</string>
 
 
 </resources>
